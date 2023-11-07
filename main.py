@@ -27,3 +27,20 @@ def decryption(inputText, key):
             result.append(c)
 
     return ''.join(result)
+
+
+while True:
+
+    operation = input("Do you want to encrypt text or decrypt? ((e) or (d))")
+
+    if operation == 'e':
+        inputText = input("Please enter a text to encrypt: ")
+        key = int(input("Please enter a key: "))
+        answer = encryption(inputText, key)
+        print(f"Your encrypted message is: {answer}")
+
+    elif operation == 'd':
+        inputText = input("Please enter a text to decrypt: ")
+        key = int(input("Please enter a key: "))
+        answer = decryption(inputText, key)
+        print(f"Your decrypted message is: {answer}")
